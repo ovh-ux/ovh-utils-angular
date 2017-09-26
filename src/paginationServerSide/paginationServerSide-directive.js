@@ -120,10 +120,10 @@ function (translator) {
                 }
 
                 $scope.pageSize = itemsPerPage;
-            } else {
-                if (!$scope.pageSize) {
-                    $scope.pageSize = 10;
-                }
+            }
+
+            if ($scope.pageSize == null || _($scope.pageSize).isNaN()) {
+                $scope.pageSize = 10;
             }
 
             $scope.$watch('pageSize', function (newValue, oldValue) {
