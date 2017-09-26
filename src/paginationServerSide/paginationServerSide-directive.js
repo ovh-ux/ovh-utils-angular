@@ -122,7 +122,7 @@ function (translator) {
                 $scope.pageSize = itemsPerPage;
             }
 
-            if (!_($scope.pageSize).isNumber()) {
+            if (!_($scope.pageSize).isNumber() || _($scope.pageSize).isNaN()) {
                 $scope.pageSize = 10;
             }
 
