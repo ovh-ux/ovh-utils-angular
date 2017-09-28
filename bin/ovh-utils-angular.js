@@ -3905,7 +3905,7 @@ function (translator) {
                 $scope.pageSize = itemsPerPage;
             }
 
-            if (!_($scope.pageSize).isNumber()) {
+            if (!_($scope.pageSize).isFinite()) {
                 $scope.pageSize = 10;
             }
 
