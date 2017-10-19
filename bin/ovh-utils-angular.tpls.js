@@ -3977,7 +3977,7 @@ function (translator) {
                     var askedPageParameterIsCorrect = pageToLoad >= 1;
 
                     var thereArePaginatedElements = $scope.paginationServerSidePaginatedStuff != null;
-                    var thereIsEnoughElementsToDisplay = thereArePaginatedElements && (pageToLoad - 1) * $scope.pageSize <= $scope.paginationServerSidePaginatedStuff.count;
+                    var thereIsEnoughElementsToDisplay = thereArePaginatedElements && (pageToLoad - 1) * $scope.pageSize <= $scope.paginationServerSidePaginatedStuff.length;
 
                     if (!pageIsLoading && tableShouldLoad && askedPageParameterIsCorrect && (!thereArePaginatedElements || thereIsEnoughElementsToDisplay)) {
                         $scope.currentPage = pageToLoad;
