@@ -1,4 +1,4 @@
-angular.module('ua.wizardForm').controller('wizardFormCtrl', ['$scope, $translate', function ($scope, $translate) {
+export default function ($scope, $translate) {
     'use strict';
 
     var initialized = false,
@@ -74,5 +74,4 @@ angular.module('ua.wizardForm').controller('wizardFormCtrl', ['$scope, $translat
     this.setWizardFormCancelButtonText = function (value) {
         $scope.wizardCancelButtonText = value;
     };
-
-}]);
+};

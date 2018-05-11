@@ -30,7 +30,7 @@
  * If the user click on the checkbox, it call a function with the new state in param.
  * With this, you can update your array/view!
  */
-angular.module('ua.triStateCheckbox').directive('triStateCheckbox', ['$timeout', function ($timeout) {
+export default function ($timeout) {
     'use strict';
     return {
         restrict : 'A',
@@ -96,4 +96,4 @@ angular.module('ua.triStateCheckbox').directive('triStateCheckbox', ['$timeout',
 
         }
     };
-}]);
+};

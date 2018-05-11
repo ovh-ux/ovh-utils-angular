@@ -1,4 +1,4 @@
-angular.module('ua.alerter').service('Alerter', ['$rootScope', function ($rootScope) {
+export default function ($rootScope) {
     "use strict";
 
     var self = this,
@@ -106,4 +106,4 @@ angular.module('ua.alerter').service('Alerter', ['$rootScope', function ($rootSc
         $rootScope.$broadcast('ovhAlert.resetMessage', alertId);
     };
 
-}]);
+};

@@ -30,7 +30,8 @@
                 data-ng-bind="wizardNextButtonText"
                 data-ng-click="nextStep()"
                 data-ng-disabled="!stepValid"
-                data-ng-show="getCurrentStep() < stepCount">
+                data-ng-show="getCurrentStep() < stepCount"
+                data-ng-blur="redirectFocus()">
         </button>
 
         <button type="button"
@@ -38,7 +39,8 @@
                 data-ng-bind="wizardConfirmButtonText"
                 data-ng-click="nextStep()"
                 data-ng-disabled="!stepValid"
-                data-ng-show="getCurrentStep() == stepCount && confirmButton">
+                data-ng-show="getCurrentStep() == stepCount && confirmButton"
+                data-ng-blur="redirectFocus()">
         </button>
     </div>
 </div>

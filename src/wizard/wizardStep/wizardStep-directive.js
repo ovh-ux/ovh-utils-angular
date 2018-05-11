@@ -1,15 +1,10 @@
-/*
- * the wizard steps
- */
-angular.module('ua.wizard').directive('wizardStep',
-['$compile', '$timeout', '$q',
-function ($compile, $timeout, $q) {
+export default function ($compile, $timeout, $q) {
     'use strict';
     return {
         restrict: 'A',
         require: '^wizard',
         transclude: true,
-        templateUrl: 'components/ovh-utils-angular/wizard/wizardStep/wizardStep.html',
+        template: require('./wizardStep.html'),
         scope: true,
         compile: function () {
             return {
@@ -154,8 +149,12 @@ function ($compile, $timeout, $q) {
                         $wizardCtrl.nextStep();
                     }
 
+                    $scope.redirectFocus = function(e) {
+                        console.log(e);
+                    };
+
                 }//End post
             };//End return
         }
     };
-}]);
+};

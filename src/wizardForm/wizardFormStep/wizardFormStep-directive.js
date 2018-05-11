@@ -1,11 +1,11 @@
-angular.module('ua.wizardForm').directive('wizardFormStep', ['$translate', function ($translate) {
+export default function ($translate) {
     'use strict';
     return {
         restrict    : 'A',
         require     : '^wizardForm',
         transclude  : true,
         scope       : true,
-        templateUrl : 'components/ovh-utils-angular/wizardForm/wizardFormStep/wizardFormStep.html',
+        template : require('./wizardFormStep.html'),
         compile     : function () {
             return {
                 pre : function ($scope, $elem, $attr, $wizardCtrl) {
@@ -90,4 +90,4 @@ angular.module('ua.wizardForm').directive('wizardFormStep', ['$translate', funct
             };
         }
     };
-}]);
+};

@@ -1,6 +1,4 @@
-angular.module('ua.price').filter('price',
-['$translate',
-function ($translate) {
+export default function ($translate) {
     "use strict";
 
     var frenchTouch = {
@@ -72,4 +70,4 @@ function ($translate) {
 
         return "<span/>";
     };
-}]);
+};

@@ -36,9 +36,7 @@
  *
  * </code>
  */
-angular.module('ua.tooltipBox').directive('tooltipBox',
-['ovhDirectives.constant.tooltipBox.CONFIG_OPTIONS', '$compile', '$http', '$rootScope', '$window', '$parse',
-function (config, $compile, $http, $rootScope, $window, $parse) {
+export default function (tooltipBoxConfig, $compile, $http, $rootScope, $window, $parse) {
     'use strict';
 
     /**
@@ -78,7 +76,7 @@ function (config, $compile, $http, $rootScope, $window, $parse) {
              */
             function setOptions() {
                 var prefixedKey = '';
-                angular.forEach(config, function(key) {
+                angular.forEach(tooltipBoxConfig, function(key) {
                     prefixedKey = 'tb' + (key.charAt(0).toUpperCase() + key.slice(1));
                     if(angular.isDefined(attrs[prefixedKey])) {
                         switch (key) {
@@ -347,4 +345,4 @@ function (config, $compile, $http, $rootScope, $window, $parse) {
 
         }
     };
-}]);
+};
