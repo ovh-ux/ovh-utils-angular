@@ -26,19 +26,21 @@ import uaPrice from './price/price'
 import uaPoll from './poll/poll'
 import uaHumanReadableSize from './humanReadableSize/humanReadableSize'
 
-angular.module('ovh-utils-angular', [
-    uaWizardForm,
-    uaWizard,
-    uaTriStateCheckbox,
-    uaTooltipBox,
-    uaStorage,
-    uaPopover,
-    uaPaginationServerSide,
-    uaNavigator,
-    uaContracts,
-    uaAlerter,
-    uaPrice,
-    uaPoll,
-    uaHumanReadableSize
-]);
+export default angular
+    .module('ovh-utils-angular', [
+        uaWizardForm,
+        uaWizard,
+        uaTriStateCheckbox,
+        uaTooltipBox,
+        uaStorage,
+        uaPopover,
+        uaPaginationServerSide,
+        uaNavigator,
+        uaContracts,
+        uaAlerter,
+        uaPrice,
+        uaPoll,
+        uaHumanReadableSize
+    ])
+    .name;
 

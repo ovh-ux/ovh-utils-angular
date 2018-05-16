@@ -2,5 +2,5 @@ import wizardStepDirective from './wizardStep-directive';
 
 export default angular
     .module('ua.wizardStep', [])
-    .directive('wizardStep', wizardFormStepDirective)
+    .directive('wizardStep', wizardStepDirective)
     .name;
