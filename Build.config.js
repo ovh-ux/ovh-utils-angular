@@ -2,7 +2,6 @@
 module.exports = {
     src: {
         js: [
-            "lib/core.js",
             "src/*/*.js",
             "!src/*/*-*.js",
             "src/*/**/**.js",

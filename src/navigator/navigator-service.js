@@ -17,7 +17,7 @@
  * TopNavigationCtrl.$inject = ['$scope', '$location', 'Navigator'];
  * </code>
  */
-angular.module('ua.navigator').service('Navigator', ['$rootScope', '$location', function ($rootScope, $location) {
+export default function ($rootScope, $location) {
     "use strict";
 
     //just check param
@@ -165,4 +165,4 @@ angular.module('ua.navigator').service('Navigator', ['$rootScope', '$location', 
         }
 
     };
-}]);
+};

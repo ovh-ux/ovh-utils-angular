@@ -1,10 +1,10 @@
-angular.module('ua.contracts').directive('contracts', function () {
+export default function () {
     "use strict";
     return {
         restrict : 'EA',
         replace  : true,
         require  : '^ngModel',
-        templateUrl: 'components/ovh-utils-angular/contracts/contracts.html',
+        template: require('./contracts.html'),
         scope : {
             contracts : '=',
             agree     : '=ngModel'
@@ -118,4 +118,4 @@ angular.module('ua.contracts').directive('contracts', function () {
 
         }
     };
-});
+};

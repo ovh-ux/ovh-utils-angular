@@ -1,4 +1,4 @@
-angular.module('ua.popover').provider('popoverFactory', function () {
+export default function () {
     "use strict";
 
     var defaultOptions,
@@ -341,4 +341,4 @@ angular.module('ua.popover').provider('popoverFactory', function () {
                 };//end return directive factory
             };// end returnservice
         }];//en return $get
-});
+};

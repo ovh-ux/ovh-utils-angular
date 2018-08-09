@@ -43,9 +43,7 @@
  * For example, if you want to ask to a single directive to load a specific page :
  *      $scope.$broadcast('paginationServerSide.loadPage', iWantToLoadThisPage, anId);
  */
-angular.module('ua.paginationServerSide').directive('paginationServerSide',
-['$translate',
-function ($translate) {
+export default function ($translate) {
     'use strict';
     return {
         restrict: 'A',
@@ -57,7 +55,7 @@ function ($translate) {
             paginationServerSidePageSizeAvailable: '=',
             paginationServerSideDatas: '='
         },
-        templateUrl: 'components/ovh-utils-angular/paginationServerSide/paginationServerSide.html',
+        template: require('./paginationServerSide.html'),
         link: function ($scope, $elem, $attr) {
 
             function checkForGlobalOrId (id) {
@@ -209,4 +207,4 @@ function ($translate) {
             $scope.loadPage(1);
         }
     };
-}]);
+};

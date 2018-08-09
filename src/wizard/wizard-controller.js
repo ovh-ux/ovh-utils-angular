@@ -1,9 +1,4 @@
-/*
-* controller for wizard directives
-*/
-angular.module('ua.wizard').controller('wizardCtrl',
-['$scope', '$translate',
-function ($scope, $translate) {
+export default function ($scope, $translate) {
     'use strict';
 
     $scope.currentStep = this.currentStep = 0;
@@ -158,4 +153,4 @@ function ($scope, $translate) {
         $scope.wizardPreviousButton = value;
     };
 
-}]);
+};

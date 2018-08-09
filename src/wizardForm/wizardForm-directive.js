@@ -1,13 +1,13 @@
-/**
- * Wizard form directive
- */
-angular.module('ua.wizardForm').directive('wizardForm', function () {
+import wizardFormController from './wizardForm-controller'
+
+export default function () {
     'use strict';
+
     return {
         restrict    : 'A',
-        controller  : 'wizardFormCtrl',
+        controller  : wizardFormController,
         transclude  : true,
-        templateUrl : 'components/ovh-utils-angular/wizardForm/wizardForm.html',
+        template : require('./wizardForm.html'),
         link        : function ($scope, $elm, $attr, ctrl) {
 
             ctrl.initWatcher();
@@ -46,4 +46,4 @@ angular.module('ua.wizardForm').directive('wizardForm', function () {
 
         }
     };
-});
+};

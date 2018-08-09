@@ -1,4 +1,4 @@
-angular.module('ua.alerter').directive('ovhAlert', function () {
+export default function () {
     'use strict';
     return {
         restrict: 'A',
@@ -6,7 +6,7 @@ angular.module('ua.alerter').directive('ovhAlert', function () {
             ovhAlert: '@'
         },
         transclude: true,
-        templateUrl: 'components/ovh-utils-angular/alerter/alerter.html',
+        template: require('./alerter.html'),
         link: function ($scope, $elm, $attr) {
 
             function checkForGlobalOrId (id) {
@@ -37,4 +37,4 @@ angular.module('ua.alerter').directive('ovhAlert', function () {
             }
         }
     };
-});
+};

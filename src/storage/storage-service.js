@@ -26,7 +26,7 @@
  * controller.$inject = ['$scope', 'storage'];
  * </code>
  */
-angular.module('ua.storage').service('storage', [function () {
+export default function () {
     "use strict";
     // polyfill
     if (!window.localStorage || !window.sessionStorage) {
@@ -222,4 +222,4 @@ angular.module('ua.storage').service('storage', [function () {
         return undefined;
     };
 
-}]);
+};

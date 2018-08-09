@@ -8,9 +8,7 @@ module.exports = function (grunt) {
 
         pkg         : grunt.file.readJSON('package.json'),
         pkgName     : grunt.file.readJSON('package.json').name.split("/")[1],
-        bower       : grunt.file.readJSON('bower.json'),
 
-        bowerdir    : 'components',
         builddir    : '.tmp',
         srcdir      : 'src',
         distdir     : 'bin',
@@ -103,9 +101,8 @@ module.exports = function (grunt) {
         // To release
         bump            : {
             options : {
-                pushTo        : 'origin v11.x.x',
-                files         : ['package.json', 'bower.json'],
-                updateConfigs : ['pkg', 'bower'],
+                files         : ['package.json'],
+                updateConfigs : ['pkg'],
                 commitFiles   : ['-a']
             }
         },

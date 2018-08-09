@@ -1,6 +1,4 @@
-angular.module('ua.poll').service('Poll',
-    ['$q', '$timeout', '$http',
-    function ($q, $timeout, $http) {
+export default function ($q, $timeout, $http) {
     'use strict';
 
     var defaultInterval = 7e3,
@@ -143,5 +141,4 @@ angular.module('ua.poll').service('Poll',
             }
         });
     }
-
-}]);
+};

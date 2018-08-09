@@ -1,15 +1,12 @@
-/*
- * wizard directive
- */
-angular.module('ua.wizard').directive('wizard',
-['$timeout',
-function ($timeout) {
+import wizardController from './wizard-controller'
+
+export default function ($timeout) {
     'use strict';
     return {
         restrict: 'A',
-        controller : 'wizardCtrl',
+        controller : wizardController,
         transclude: true,
-        templateUrl : 'components/ovh-utils-angular/wizard/wizard.html',
+        template: require('./wizard.html'),
         link: function ($scope, $elm, $attr, ctrl) {
             var interval = null, inputs = "", konami = "38384040373937396665";
 
@@ -28,6 +25,11 @@ function ($timeout) {
             $scope.$on('wizard-stepChange', function () {
                 setFocus();
             });
+
+            // Redirect the focus to the first element when we leave the last element
+
+            // var focusables = $elm.find('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+            // console.log(focusables);
 
             /*
              *KeyBoardManaging
@@ -178,4 +180,4 @@ function ($timeout) {
             }
         }
     };
-}]);
+};
