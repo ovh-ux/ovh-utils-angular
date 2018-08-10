@@ -1,4 +1,4 @@
-export default function ($translate) {
+export default /* @ngInject */ function ($translate) {
     "use strict";
 
     return function (size, options) {

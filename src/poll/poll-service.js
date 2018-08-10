@@ -1,4 +1,4 @@
-export default function ($q, $timeout, $http) {
+export default /* @ngInject */ function ($q, $timeout, $http) {
     'use strict';
 
     var defaultInterval = 7e3,

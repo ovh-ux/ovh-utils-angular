@@ -1,4 +1,4 @@
-export default function ($scope, $translate) {
+export default /* @ngInject */ function ($scope, $translate) {
     'use strict';
 
     var initialized = false,

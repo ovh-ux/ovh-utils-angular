@@ -43,7 +43,7 @@
  * For example, if you want to ask to a single directive to load a specific page :
  *      $scope.$broadcast('paginationServerSide.loadPage', iWantToLoadThisPage, anId);
  */
-export default function ($translate) {
+export default /* @ngInject */ function ($translate) {
     'use strict';
     return {
         restrict: 'A',

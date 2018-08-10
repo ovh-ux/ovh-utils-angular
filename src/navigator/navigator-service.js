@@ -17,7 +17,7 @@
  * TopNavigationCtrl.$inject = ['$scope', '$location', 'Navigator'];
  * </code>
  */
-export default function ($rootScope, $location) {
+export default /* @ngInject */ function ($rootScope, $location) {
     "use strict";
 
     //just check param

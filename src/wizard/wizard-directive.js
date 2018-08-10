@@ -1,6 +1,6 @@
 import wizardController from './wizard-controller'
 
-export default function ($timeout) {
+export default /* @ngInject */ function ($timeout) {
     'use strict';
     return {
         restrict: 'A',

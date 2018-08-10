@@ -1,4 +1,4 @@
-export default function ($rootScope) {
+export default /* @ngInject */ function ($rootScope) {
     "use strict";
 
     var self = this,

@@ -36,7 +36,7 @@
  *
  * </code>
  */
-export default function (tooltipBoxConfig, $compile, $http, $rootScope, $window, $parse) {
+export default /* @ngInject */ function (tooltipBoxConfig, $compile, $http, $rootScope, $window, $parse) {
     'use strict';
 
     /**

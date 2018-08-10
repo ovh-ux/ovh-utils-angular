@@ -1,4 +1,4 @@
-export default function ($scope, $translate) {
+export default /* @ngInject */ function ($scope, $translate) {
     'use strict';
 
     $scope.currentStep = this.currentStep = 0;
