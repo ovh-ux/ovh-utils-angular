@@ -1,4 +1,4 @@
-export default function ($compile, $timeout, $q) {
+export default /* @ngInject */ function ($compile, $timeout, $q) {
     'use strict';
     return {
         restrict: 'A',
