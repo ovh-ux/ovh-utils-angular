@@ -1,7 +1,9 @@
+import angular from 'angular';
+
 import pollService from './poll-service';
 
-export default angular
-    .module('ua.poll', [])
-    .service('Poll', pollService)
-    .name;
+const moduleName = 'ua.poll';
 
+angular.module(moduleName, []).service('Poll', pollService);
+
+export default moduleName;

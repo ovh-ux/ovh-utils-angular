@@ -1,6 +1,10 @@
+import angular from 'angular';
 import wizardStepDirective from './wizardStep-directive';
 
-export default angular
-    .module('ua.wizardStep', [])
-    .directive('wizardStep', wizardStepDirective)
-    .name;
+const moduleName = 'ua.wizardStep';
+
+angular
+  .module(moduleName, [])
+  .directive('wizardStep', wizardStepDirective);
+
+export default moduleName;

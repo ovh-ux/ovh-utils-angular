@@ -1,7 +1,12 @@
+import angular from 'angular';
+import translate from 'angular-translate';
+
 import humanReadableSizeFilter from './humanReadableSize-filter';
 
-export default angular
-    .module('ua.humanReadableSize', [])
-    .service('humanReadableSize', humanReadableSizeFilter)
-    .name;
+const moduleName = 'ua.humanReadableSize';
 
+angular
+  .module(moduleName, [translate])
+  .service('humanReadableSize', humanReadableSizeFilter);
+
+export default moduleName;

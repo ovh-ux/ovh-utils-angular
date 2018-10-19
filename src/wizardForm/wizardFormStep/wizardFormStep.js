@@ -1,7 +1,10 @@
+import angular from 'angular';
 import wizardFormStepDirective from './wizardFormStep-directive';
 
-export default angular
-    .module('ua.wizardFormStep', [])
-    .directive('wizardFormStep', wizardFormStepDirective)
-    .name;
+const moduleName = 'ua.wizardFormStep';
 
+angular
+  .module(moduleName, [])
+  .directive('wizardFormStep', wizardFormStepDirective);
+
+export default moduleName;

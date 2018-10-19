@@ -1,7 +1,9 @@
+import angular from 'angular';
+
 import storageService from './storage-service';
 
-export default angular
-    .module('ua.storage', [])
-    .service('storage', storageService)
-    .name;
+const moduleName = 'ua.storage';
 
+angular.module(moduleName, []).service('storage', storageService);
+
+export default moduleName;

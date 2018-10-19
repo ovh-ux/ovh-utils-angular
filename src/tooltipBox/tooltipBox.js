@@ -1,21 +1,26 @@
+import angular from 'angular';
+
 import tooltipBoxDirective from './tooltipBox-directive';
+import './tooltipBox.less';
 
-export default angular
-    .module('ua.tooltipBox', [])
-    .constant('tooltipBoxConfig', [
-        'container',
-        'selector',
-        'title',
-        'contentText',
-        'contentTemplate',
-        'placement',
-        'animation',
-        'unique',
-        'html',
-        'trigger',
-        'delay',
-        'hideOnBlur'
-    ])
-    .directive('tooltipBox', tooltipBoxDirective)
-    .name;
+const moduleName = 'ua.tooltipBox';
 
+angular
+  .module(moduleName, [])
+  .constant('tooltipBoxConfig', [
+    'container',
+    'selector',
+    'title',
+    'contentText',
+    'contentTemplate',
+    'placement',
+    'animation',
+    'unique',
+    'html',
+    'trigger',
+    'delay',
+    'hideOnBlur',
+  ])
+  .directive('tooltipBox', tooltipBoxDirective);
+
+export default moduleName;

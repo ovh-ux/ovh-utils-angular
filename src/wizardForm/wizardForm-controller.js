@@ -1,77 +1,79 @@
+import angular from 'angular';
+
 export default /* @ngInject */ function ($scope, $translate) {
-    'use strict';
+  let initialized = false;
 
-    var initialized = false,
-    currentStep;
+  let currentStep;
 
-    $scope.steps = [];
-    $scope.currentStep = undefined;
+  $scope.steps = [];
+  $scope.currentStep = undefined;
 
-    $scope.confirmButton = true;
-    $scope.cancelButton = true;
-    $scope.wizardConfirmButtonText = $translate.instant('wizard_confirm');
-    $scope.wizardCancelButtonText = $translate.instant('wizard_cancel');
+  $scope.confirmButton = true;
+  $scope.cancelButton = true;
+  $scope.wizardConfirmButtonText = $translate.instant('wizard_confirm');
+  $scope.wizardCancelButtonText = $translate.instant('wizard_cancel');
 
-    $scope.onFinish = angular.noop;
-    $scope.onCancel = angular.noop;
+  $scope.onFinish = angular.noop;
+  $scope.onCancel = angular.noop;
 
-    this.initWatcher = function () {
-        initialized = true;
-        this.checkStepShow();
-    };
+  this.initWatcher = function () {
+    initialized = true;
+    this.checkStepShow();
+  };
 
-    // Watcher
-    this.checkStepShow = function () {
-        if (!initialized) {
-            return;
+  // Watcher
+  this.checkStepShow = function () {
+    if (!initialized) {
+      return;
+    }
+    currentStep = undefined;
+
+    angular.forEach($scope.steps, (stepParams, count) => {
+      const step = stepParams;
+      if (currentStep !== undefined) {
+        if (count > currentStep) {
+          step.stepShown = false;
         }
-        currentStep = undefined;
-
-        angular.forEach($scope.steps, function (step, count) {
-            if (currentStep !== undefined) {
-                if (count > currentStep) {
-                    step.stepShown = false;
-                }
-            } else {
-                step.stepShown = true;
-                if (!step.stepValid) {
-                    currentStep = count;
-                }
-            }
-        });
-        $scope.currentStep = currentStep;
-        if (currentStep === undefined) {
-            $scope.stepFormValid = true;
-        } else {
-            $scope.stepFormValid = false;
+      } else {
+        step.stepShown = true;
+        if (!step.stepValid) {
+          currentStep = count;
         }
-    };
+      }
+    });
+    $scope.currentStep = currentStep;
+    if (currentStep === undefined) {
+      $scope.stepFormValid = true;
+    } else {
+      $scope.stepFormValid = false;
+    }
+  };
 
-    this.addStep = function (step) {
-        $scope.steps.push(step);
-    };
+  this.addStep = function (step) {
+    $scope.steps.push(step);
+  };
 
-    this.getStepCount = function () {
-        return $scope.steps.length;
-    };
+  this.getStepCount = function () {
+    return $scope.steps.length;
+  };
 
-    /**
-     * Buttons
-     */
+  /**
+   * Buttons
+   */
 
-    this.setConfirmButton = function (value) {
-        $scope.confirmButton = value;
-    };
+  this.setConfirmButton = function (value) {
+    $scope.confirmButton = value;
+  };
 
-    this.setCancelButton = function (value) {
-        $scope.cancelButton = value;
-    };
+  this.setCancelButton = function (value) {
+    $scope.cancelButton = value;
+  };
 
-    this.setWizardFormConfirmButtonText = function (value) {
-        $scope.wizardConfirmButtonText = value;
-    };
+  this.setWizardFormConfirmButtonText = function (value) {
+    $scope.wizardConfirmButtonText = value;
+  };
 
-    this.setWizardFormCancelButtonText = function (value) {
-        $scope.wizardCancelButtonText = value;
-    };
-};
+  this.setWizardFormCancelButtonText = function (value) {
+    $scope.wizardCancelButtonText = value;
+  };
+}

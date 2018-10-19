@@ -10,16 +10,10 @@
 
 ## Installation
 
-### Bower
-
-```sh
-$ bower install ovh-utils-angular --save
-```
-
 ### NPM
 
 ```sh
-$ npm install @ovh-ux/ovh-utils-angular --save
+$ npm install @ovh-ux/ovh-utils-angular --save # or yarn add @ovh-ux/ovh-utils-angular
 ```
 
 ## Get the sources
@@ -27,8 +21,7 @@ $ npm install @ovh-ux/ovh-utils-angular --save
 ```sh
 $ git clone https://github.com/ovh-ux/ovh-utils-angular.git
 $ cd ovh-utils-angular
-$ npm install
-$ bower install
+$ npm install # or yarn
 ```
 
 You've developed a new cool feature? Fixed an annoying bug? We'd be happy

@@ -1,7 +1,14 @@
+import angular from 'angular';
+import translate from 'angular-translate';
+
 import contractsDirective from './contracts-directive';
 
-export default angular
-    .module('ua.contracts', [])
-    .directive('contracts', contractsDirective)
-    .name;
+import './contracts.css';
 
+const moduleName = 'ua.contracts';
+
+angular
+  .module(moduleName, [translate])
+  .directive('contracts', contractsDirective);
+
+export default moduleName;

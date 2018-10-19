@@ -1,7 +1,11 @@
+import angular from 'angular';
+
 import triStateCheckboxDirective from './triStateCheckbox-directive';
 
-export default angular
-    .module('ua.triStateCheckbox', [])
-    .directive('triStateCheckbox', triStateCheckboxDirective)
-    .name;
+const moduleName = 'ua.triStateCheckbox';
 
+angular
+  .module(moduleName, [])
+  .directive('triStateCheckbox', triStateCheckboxDirective);
+
+export default moduleName;

@@ -1,7 +1,11 @@
+import angular from 'angular';
+
 import paginationServerSideDirective from './paginationServerSide-directive';
 
-export default angular
-    .module('ua.paginationServerSide', [])
-    .directive('paginationServerSide', paginationServerSideDirective)
-    .name;
+const moduleName = 'ua.paginationServerSide';
 
+angular
+  .module(moduleName, [])
+  .directive('paginationServerSide', paginationServerSideDirective);
+
+export default moduleName;

@@ -1,7 +1,9 @@
-import navigatorService from './navigator-service'
+import angular from 'angular';
 
-export default angular
-    .module('ua.navigator', [])
-    .service('Navigator', navigatorService)
-    .name;
+import navigatorService from './navigator-service';
 
+const moduleName = 'ua.navigator';
+
+angular.module(moduleName, []).service('Navigator', navigatorService);
+
+export default moduleName;

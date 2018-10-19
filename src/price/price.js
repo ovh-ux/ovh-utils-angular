@@ -1,7 +1,10 @@
+import angular from 'angular';
+import translate from 'angular-translate';
+
 import priceFilter from './price-filter';
 
-export default angular
-    .module('ua.price', [])
-    .filter('price', priceFilter)
-    .name;
+const moduleName = 'ua.price';
 
+angular.module('ua.price', [translate]).filter('price', priceFilter);
+
+export default moduleName;
