@@ -5,7 +5,7 @@
   "license": "BSD-3-Clause",
   "author": "OVH SAS",
   "repository": "ovh-ux/ovh-utils-angular",
-  "main": "./src/index.js",
+  "main": "./dist/ovh-utils-angular.js",
   "scripts": {
     "test": "yarn run lint",
     "lint": "run-p lint:css lint:js",
