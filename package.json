@@ -22,7 +22,7 @@
   ],
   "lint-staged": {
     "*.html": [
-      "htmlhint 'packages/**/*.html'"
+      "htmlhint 'src/**/*.html'"
     ],
     "*.js": [
       "eslint --fix",
