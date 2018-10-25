@@ -8,7 +8,8 @@
   "main": "./dist/ovh-utils-angular.js",
   "scripts": {
     "test": "yarn run lint",
-    "lint": "run-p lint:css lint:js",
+    "lint": "run-p lint:html lint:css lint:js",
+    "lint:html": "htmlhint 'src/**/*.html'",
     "lint:css": "stylelint 'src/**/*.less' --fix",
     "lint:js": "eslint --quiet --fix ./src",
     "version": "npx conventional-changelog-cli -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
@@ -20,25 +21,6 @@
     "angular",
     "utils"
   ],
-  "lint-staged": {
-    "*.html": [
-      "htmlhint 'src/**/*.html'"
-    ],
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ],
-    "*.less": [
-      "stylelint 'src/**/*.less' --fix",
-      "git add"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
   "dependencies": {
     "@ovh-ux/translate-async-loader": "^1.0.4",
     "filesize": "^3.6.1",
@@ -50,7 +32,6 @@
     "@babel/preset-env": "^7.1.0",
     "@commitlint/cli": "^7.1.2",
     "@commitlint/config-angular": "^7.1.2",
-    "@commitlint/config-conventional": "^7.1.2",
     "@ovh-ux/component-rollup-config": "^1.1.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.6.1",
