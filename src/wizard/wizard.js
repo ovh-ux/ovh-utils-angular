@@ -5,6 +5,9 @@ import wizardDirective from './wizard-directive';
 
 const moduleName = 'ua.wizard';
 
-angular.module(moduleName, [uaWizardStep]).directive('wizard', wizardDirective);
+angular
+  .module(moduleName, [uaWizardStep])
+  .directive('wizard', wizardDirective)
+  .run(/* @ngTranslationsInject ./translations */);
 
 export default moduleName;

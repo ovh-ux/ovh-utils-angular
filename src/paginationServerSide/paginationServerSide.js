@@ -6,6 +6,7 @@ const moduleName = 'ua.paginationServerSide';
 
 angular
   .module(moduleName, [])
-  .directive('paginationServerSide', paginationServerSideDirective);
+  .directive('paginationServerSide', paginationServerSideDirective)
+  .run(/* @ngTranslationsInject ./translations */);
 
 export default moduleName;

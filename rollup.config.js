@@ -1,5 +1,18 @@
-import config from '@ovh-ux/component-rollup-config';
+import configGenerator from '@ovh-ux/component-rollup-config';
 
-export default config({
+const config = configGenerator({
   input: 'src/ovh-utils-angular.js',
 });
+
+export default [
+  config.es(),
+  config.cjs(),
+  config.umd({
+    output: {
+      globals: {
+        angular: 'angular',
+        'angular-translate': 'pascalprecht.translate',
+      },
+    },
+  }),
+];

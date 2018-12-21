@@ -7,6 +7,7 @@ const moduleName = 'ua.wizardForm';
 
 angular
   .module(moduleName, [uaWizardFormStep])
-  .directive('wizardForm', wizardFormDirective);
+  .directive('wizardForm', wizardFormDirective)
+  .run(/* @ngTranslationsInject ./translations */);
 
 export default moduleName;
