@@ -9,6 +9,7 @@ const moduleName = 'ua.contracts';
 
 angular
   .module(moduleName, [translate])
-  .directive('contracts', contractsDirective);
+  .directive('contracts', contractsDirective)
+  .run(/* @ngTranslationsInject ./translations */);
 
 export default moduleName;

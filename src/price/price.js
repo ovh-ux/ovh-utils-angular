@@ -5,6 +5,9 @@ import priceFilter from './price-filter';
 
 const moduleName = 'ua.price';
 
-angular.module('ua.price', [translate]).filter('price', priceFilter);
+angular
+  .module('ua.price', [translate])
+  .filter('price', priceFilter)
+  .run(/* @ngTranslationsInject ./translations */);
 
 export default moduleName;

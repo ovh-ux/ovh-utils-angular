@@ -14,10 +14,10 @@ export default /* @ngInject */ function ($scope, $translate) {
   $scope.cancelButton = true;
   $scope.keydownDisabled = false;
   $scope.wizardBreadCrumb = false;
-  $scope.wizardConfirmButtonText = $translate.instant('wizard_confirm');
-  $scope.wizardCancelButtonText = $translate.instant('wizard_cancel');
-  $scope.wizardPreviousButtonText = $translate.instant('wizard_previous');
-  $scope.wizardNextButtonText = $translate.instant('wizard_next');
+  $scope.wizardConfirmButtonText = $translate.instant('ua_wizard_confirm');
+  $scope.wizardCancelButtonText = $translate.instant('ua_wizard_cancel');
+  $scope.wizardPreviousButtonText = $translate.instant('ua_wizard_previous');
+  $scope.wizardNextButtonText = $translate.instant('ua_wizard_next');
   $scope.wizardCloseButton = true;
   $scope.wizardPreviousButton = true;
 

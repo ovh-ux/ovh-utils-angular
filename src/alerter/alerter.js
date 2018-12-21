@@ -11,6 +11,7 @@ const moduleName = 'ua.alerter';
 angular
   .module(moduleName, [tooltipBox, translate])
   .service('Alerter', alerterService)
-  .directive('ovhAlert', alerterDirective);
+  .directive('ovhAlert', alerterDirective)
+  .run(/* @ngTranslationsInject ./translations */);
 
 export default moduleName;

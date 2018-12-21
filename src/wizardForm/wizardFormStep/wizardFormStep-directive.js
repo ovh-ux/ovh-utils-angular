@@ -86,7 +86,7 @@ export default /* @ngInject */ function ($translate) {
               $scope.stepHiddenText = newText;
             });
           } else {
-            $scope.stepHiddenText = $translate.instant('wizard_hidden_text');
+            $scope.stepHiddenText = $translate.instant('ua_wizard_hidden_text');
           }
         },
         post($scope, $elem, $attr, $wizardCtrl) {

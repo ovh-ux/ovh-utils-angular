@@ -51,21 +51,21 @@ export default /* @ngInject */ function ($translate) {
         return `<b class="red">${price.withoutTax.text}</b>`;
       }
       if (frequency === 'yearly') {
-        return `<b class="red">${$translate.instant('price_ht_label', {
+        return `<b class="red">${$translate.instant('ua_price_ht_label', {
           price: price.withoutTax.text,
         })}<small>${$translate.instant(
-          'price_label_yearly',
-        )}</small></b><i class="small"> (${$translate.instant('price_ttc_label', {
+          'ua_price_label_yearly',
+        )}</small></b><i class="small"> (${$translate.instant('ua_price_ttc_label', {
           price: price.withTax.text,
-        })}<small>${$translate.instant('price_label_yearly')}</small>)</i>`;
+        })}<small>${$translate.instant('ua_price_label_yearly')}</small>)</i>`;
       }
-      return `<b class="red">${$translate.instant('price_ht_label', {
+      return `<b class="red">${$translate.instant('ua_price_ht_label', {
         price: price.withoutTax.text,
-      })}</b><i class="small"> (${$translate.instant('price_ttc_label', {
+      })}</b><i class="small"> (${$translate.instant('ua_price_ttc_label', {
         price: price.withTax.text,
       })})</i>`;
     }
-    return `<b class="red">${$translate.instant('price_free')}</b>`;
+    return `<b class="red">${$translate.instant('ua_price_free')}</b>`;
   }
 
   return function (price, ovhSubsidiary, frequency) {

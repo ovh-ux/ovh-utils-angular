@@ -10,8 +10,8 @@ export default /* @ngInject */ function ($scope, $translate) {
 
   $scope.confirmButton = true;
   $scope.cancelButton = true;
-  $scope.wizardConfirmButtonText = $translate.instant('wizard_confirm');
-  $scope.wizardCancelButtonText = $translate.instant('wizard_cancel');
+  $scope.wizardConfirmButtonText = $translate.instant('ua_wizard_confirm');
+  $scope.wizardCancelButtonText = $translate.instant('ua_wizard_cancel');
 
   $scope.onFinish = angular.noop;
   $scope.onCancel = angular.noop;

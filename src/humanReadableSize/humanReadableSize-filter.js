@@ -8,15 +8,15 @@ export default /* @ngInject */ function ($translate) {
 
     const opts = options || {};
     opts.suffixes = {
-      B: $translate.instant('unit_size_B'),
-      KB: $translate.instant('unit_size_KB'),
-      MB: $translate.instant('unit_size_MB'),
-      GB: $translate.instant('unit_size_GB'),
-      TB: $translate.instant('unit_size_TB'),
-      PB: $translate.instant('unit_size_PB'),
-      EB: $translate.instant('unit_size_EB'),
-      ZB: $translate.instant('unit_size_ZB'),
-      YB: $translate.instant('unit_size_YB'),
+      B: $translate.instant('ua_unit_size_B'),
+      KB: $translate.instant('ua_unit_size_KB'),
+      MB: $translate.instant('ua_unit_size_MB'),
+      GB: $translate.instant('ua_unit_size_GB'),
+      TB: $translate.instant('ua_unit_size_TB'),
+      PB: $translate.instant('ua_unit_size_PB'),
+      EB: $translate.instant('ua_unit_size_EB'),
+      ZB: $translate.instant('ua_unit_size_ZB'),
+      YB: $translate.instant('ua_unit_size_YB'),
     };
 
     return filesize(size, opts);
