@@ -13,8 +13,10 @@
            data-ng-click="expandDetails()">
         </button>
         <ul data-ng-if="expand">
-            <li class="fs12" data-ng-repeat="ovhAlertMessage in ::ovhAlertMessageDetails track by $index">
-                {{ovhAlertMessage.id}} : {{ovhAlertMessage.message}}
+            <li data-ng-repeat="ovhAlertMessage in ::ovhAlertMessageDetails track by $index">
+                <span data-ng-bind="ovhAlertMessage.id"></span>
+                :
+                <span data-ng-bind="ovhAlertMessage.message"></span>
             </li>
         </ul>
     </div>
