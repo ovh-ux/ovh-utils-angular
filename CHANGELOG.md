@@ -1,3 +1,13 @@
+## [14.0.2-alpha.0](https://github.com/ovh-ux/ovh-utils-angular/compare/v14.0.1-alpha.0...v14.0.2-alpha.0) (2019-01-02)
+
+
+### Bug Fixes
+
+* **i18n:** retrieve translations ([a34ea6a](https://github.com/ovh-ux/ovh-utils-angular/commit/a34ea6a))
+* **i18n:** submit translations ([aabc8a1](https://github.com/ovh-ux/ovh-utils-angular/commit/aabc8a1))
+
+
+
 ## [14.0.1-alpha.0](https://github.com/ovh-ux/ovh-utils-angular/compare/v14.0.0-alpha.1...v14.0.1-alpha.0) (2019-01-02)
 
 
