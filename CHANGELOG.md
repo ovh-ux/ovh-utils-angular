@@ -1,3 +1,12 @@
+## [14.0.1-alpha.0](https://github.com/ovh-ux/ovh-utils-angular/compare/v14.0.0-alpha.1...v14.0.1-alpha.0) (2019-01-02)
+
+
+### Bug Fixes
+
+* **translations:** add missing translations ([b58b8f2](https://github.com/ovh-ux/ovh-utils-angular/commit/b58b8f2))
+
+
+
 <a name="14.0.0-alpha.1"></a>
 # [14.0.0-alpha.1](https://github.com/ovh-ux/ovh-utils-angular/compare/v14.0.0-alpha.0...v14.0.0-alpha.1) (2018-10-26)
 
