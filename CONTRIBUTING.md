@@ -1,4 +1,4 @@
-# Contributing to ovh-utils-angular
+# Contributing to ng-ovh-utils
 
 This project accepts contributions. In order to contribute, you should
 pay attention to a few things:
@@ -19,8 +19,8 @@ The contributions should be submitted through GitHub Pull Requests.
 
 # Licensing for new files
 
-ovh-utils-angular is licensed under a BSD-3-Clause license. Anything
-contributed to ovh-utils-angular must be released under this license.
+ng-ovh-utils is licensed under a BSD-3-Clause license. Anything
+contributed to ng-ovh-utils must be released under this license.
 
 When introducing a new file into the project, please make sure it has a
 copyright header making clear under which license it's being released.
