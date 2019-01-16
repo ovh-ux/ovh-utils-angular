@@ -1,3 +1,13 @@
+## [14.0.3-alpha.0](https://github.com/ovh-ux/ovh-utils-angular/compare/v14.0.2...v14.0.3-alpha.0) (2019-01-16)
+
+
+### Bug Fixes
+
+* **alerter:** fix details display for sws batch result ([84d1e95](https://github.com/ovh-ux/ovh-utils-angular/commit/84d1e95)), closes [#21](https://github.com/ovh-ux/ovh-utils-angular/issues/21)
+* **wizard:** remove inline style ([072f13e](https://github.com/ovh-ux/ovh-utils-angular/commit/072f13e))
+
+
+
 ## [14.0.2](https://github.com/ovh-ux/ovh-utils-angular/compare/v14.0.2-alpha.1...v14.0.2) (2019-01-02)
 
 
