@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "filesize": "^3.6.1",
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.15"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.1.0",
